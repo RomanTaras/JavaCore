@@ -12,6 +12,26 @@
  
  ♦ [lesson-08](https://github.com/RomanTaras/JavaCore/tree/lesson8)  (Java Core - OOP - ENUM, read console input ); 
  
+ ♦ [lesson-09](https://github.com/RomanTaras/JavaCore/tree/lesson9)  (Java Core - Exception, code convention); 
+ 
+ ♦ [lesson-10](https://github.com/RomanTaras/JavaCore/tree/lesson10) (Java Core - String); 
+ 
+ ♦ [lesson-11](https://github.com/RomanTaras/JavaCore/tree/lesson11) (Java Core -  Arrays, Collections);
+ 
+ ♦ [lesson-12](https://github.com/RomanTaras/JavaCore/tree/lesson12) (Java Core - List); 
+ 
+ ♦ [lesson-15](https://github.com/RomanTaras/JavaCore/tree/lesson15) (Java Core - Map); 
+ 
+ ♦ [lesson-17](https://github.com/RomanTaras/JavaCore/tree/lesson17) (Java Core - Inner classes); 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
