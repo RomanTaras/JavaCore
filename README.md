@@ -20,6 +20,8 @@
  
  ♦ [lesson-12](https://github.com/RomanTaras/JavaCore/tree/lesson12) (Java Core - List); 
  
+ ♦ [lesson-14](https://github.com/RomanTaras/JavaCore/tree/lesson14) (Java Core - Set, Queue);
+ 
  ♦ [lesson-15](https://github.com/RomanTaras/JavaCore/tree/lesson15) (Java Core - Map); 
  
  ♦ [lesson-17](https://github.com/RomanTaras/JavaCore/tree/lesson17) (Java Core - Inner classes); 
