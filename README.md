@@ -24,6 +24,8 @@
  
  ♦ [lesson-15](https://github.com/RomanTaras/JavaCore/tree/lesson15) (Java Core - Map); 
  
+ ♦ [lesson-16](https://github.com/RomanTaras/JavaCore/tree/lesson16) (Java Core - Reflection.pptx); 
+ 
  ♦ [lesson-17](https://github.com/RomanTaras/JavaCore/tree/lesson17) (Java Core - Inner classes); 
  
  
