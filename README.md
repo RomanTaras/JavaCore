@@ -28,6 +28,8 @@
  
  ♦ [lesson-17](https://github.com/RomanTaras/JavaCore/tree/lesson17) (Java Core - Inner classes); 
  
+ ♦ [lesson-24](https://github.com/RomanTaras/JavaCore/tree/lesson24) (Java Core - Best practice); 
+ 
  
  
  
