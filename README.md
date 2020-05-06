@@ -30,6 +30,8 @@
  
  ♦ [lesson-18](https://github.com/RomanTaras/JavaCore/tree/lesson18) (Java Core - Generics); 
  
+ ♦ [lesson-19](https://github.com/RomanTaras/JavaCore/tree/lesson19) (19-Java Core-IO); 
+ 
  ♦ [lesson-22](https://github.com/RomanTaras/JavaCore/tree/lesson22) (22-Java Core-Lambda,Optional); 
  
  ♦ [lesson-24](https://github.com/RomanTaras/JavaCore/tree/lesson24) (Java Core - Best practice); 
