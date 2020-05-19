@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Array {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<Integer>();
+        List list = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             list.add(i, (int) ((Math.random() * 101)));
         }
