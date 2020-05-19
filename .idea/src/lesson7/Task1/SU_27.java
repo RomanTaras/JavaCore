@@ -19,10 +19,6 @@ class SU_27 extends Plane implements PlaneFeatures {
     public void getNuclearStrike() {
         System.out.println("The number of dropped atomic bombs " + ((int) (Math.random() * maxAtomicBombs)) + " unit ");
     }
-//    public String getMovement(String "turnLeft"; String"turn right"; String "doesUp";String  "goesDowm"){
-//        System.out.println("La-la-la");
-//        return null;
-//    }
 
     public static void main(String[] args) {
 
