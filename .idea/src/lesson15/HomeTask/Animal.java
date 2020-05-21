@@ -1,29 +1,39 @@
 package lesson15.HomeTask;
 
 public class Animal {
-    public String TypeOfAnimal;
-    public String NameOfAnimal;
+    private String typeOfAnimal;
+    private String nameOfAnimal;
+
+    public Animal() {
+    }
+
+    public Animal(String typeOfAnimal, String nameOfAnimal) {
+        this.typeOfAnimal = typeOfAnimal;
+        this.nameOfAnimal = nameOfAnimal;
+    }
 
     public String getTypeOfAnimal() {
-        return TypeOfAnimal;
+        return typeOfAnimal;
+    }
+
+    public void setTypeOfAnimal(String typeOfAnimal) {
+        this.typeOfAnimal = typeOfAnimal;
     }
 
     public String getNameOfAnimal() {
-        return NameOfAnimal;
+        return nameOfAnimal;
+    }
+
+    public void setNameOfAnimal(String nameOfAnimal) {
+        this.nameOfAnimal = nameOfAnimal;
     }
 
     @Override
     public String toString() {
         return "Animal{" +
-                "TypeOfAnimal='" + TypeOfAnimal + '\'' +
-                ", NameOfAnimal='" + NameOfAnimal + '\'' +
+                "typeOfAnimal='" + typeOfAnimal + '\'' +
+                ", nameOfAnimal='" + nameOfAnimal + '\'' +
                 '}';
-    }
-
-    public Animal(String typeOfAnimal, String nameOfAnimal) {
-        TypeOfAnimal = typeOfAnimal;
-        NameOfAnimal = nameOfAnimal;
-
     }
 }
 

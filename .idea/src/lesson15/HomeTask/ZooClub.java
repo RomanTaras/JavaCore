@@ -3,42 +3,53 @@ package lesson15.HomeTask;
 import java.util.*;
 
 
-public class ZooClub   {
+public class ZooClub {
 
-    public static void main(String[] args) {
+    Map<Person, List<Animal>> zooClubMap = new HashMap<>();
 
-        List<Person> personList = new LinkedList<>();
-        personList.add(new Person("Petya","25"));
-        personList.add(new Person("Oksana", "20"));
-        personList.add(new Person("Sonya", "23"));
+    private Person findPersonKey(String name) {
 
-        List<Animal> animalList = new ArrayList<>();
-        animalList.add(new Animal("Cat", "Sebastian"));
-        animalList.add(new Animal("Dog", "Godzilla"));
-        animalList.add(new Animal("Chinchilla", "Mika"));
+        for (Person person : zooClubMap.keySet()) {
 
-        Map<String, String> map = new HashMap<>();
+            if (person.getName().equals(name)) {
 
-        for (Person person : personList) {
-            map.put(person.getName(), person.getAge());
+                return person;
+            }
         }
+        return null;
+    }
 
-        for (Animal animal : animalList) {
-            map.put(animal.getNameOfAnimal(), animal.getTypeOfAnimal());
+    void addPersonToClub(String name, int age) {
+        zooClubMap.put(new Person(name, age), new ArrayList<Animal>());
+    }
+
+    void addAnimalToPerson(String name, String typeOfAnimal, String nameOfAnimal) {
+        String a = zooClubMap.keySet().iterator().next().getName();
+        zooClubMap.get(findPersonKey(name)).add(new Animal(typeOfAnimal, nameOfAnimal));
+    }
+
+    void removeAnimal(String name, String typeOfAnimal, String nameOfAnimal) {
+        zooClubMap.get(findPersonKey(name)).remove(new Animal(typeOfAnimal, nameOfAnimal));
+    }
+
+    void removePersonFromClub(String name) {
+        zooClubMap.remove(findPersonKey(name));
+    }
+
+    void removeAllAnimals(String typeOfAnimal) {
+        String a = String.valueOf(zooClubMap.values().iterator().next().remove(typeOfAnimal));
+        if (typeOfAnimal.matches(a)) {
+            for (List<Animal> value : zooClubMap.values()) {
+                value.remove(typeOfAnimal);
+            }
         }
-        System.out.println("Map :" + map);
-
-        animalList.remove(2);
-
-        System.out.println("animalList afther removing one animal :" + animalList);
-
-        personList.remove(0);
-        System.out.println("Personlist afther removing member with index 0 " + personList.toString());
-        map.remove("Mika","Chinchilla");
-        System.out.println("Map :" + map);
-
-
-
 
     }
+
+    void showAllZooClub() {
+        System.out.println(zooClubMap);
+    }
 }
+
+
+
