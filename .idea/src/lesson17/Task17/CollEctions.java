@@ -4,73 +4,92 @@ import java.util.Arrays;
 import java.util.Collections;
 
 class CollEctions {
-    public static void main(String[] args) {
+
+    public Number[] myNumbers;
 
 
-        Integer[] numberArray = new Integer[14];
-        final Integer[] temp = {0};
+    public CollEctions(Number[] myNumbers) {
+        this.myNumbers = myNumbers;
+    }
 
-        for (int i = 0; i < numberArray.length; i++) {
-            numberArray[i] = (int) (Math.random() * 10);
+    public CollEctions() {
+    }
+
+    public Number[] getMyNumbers() {
+        return myNumbers;
+    }
+
+    public void setMyNumbers(Number[] myNumbers) {
+        this.myNumbers = myNumbers;
+    }
+
+
+    public class MyInnerClassOne implements Iterator {
+        boolean v;
+        int i = 0;
+
+
+        @Override
+        public boolean hasNext(Number[] myNumbers) {
+
+            if (myNumbers.length > i) {
+                v = true;
+            } else {
+                v = false;
+            }
+            return v;
         }
 
-        class Test1 implements Iterator {
-            @Override
-            public void hasNext() {
-                Arrays.sort(numberArray);
-                System.out.println("Sorted array from nested class Test1 : " + Arrays.toString(numberArray));
-            }
 
-            @Override
-            public void next() {
-                for (int i = 0; i < numberArray.length; i++) {
-                    if (numberArray[i] % 2 != 0) {
-                        numberArray[i] = 0;
-                    }
-                }
-                System.out.println("After replacing odd elements to '0'  : " + Arrays.toString(numberArray));
-
-            }
-
-
-        }
-        class Test2 implements Iterator {
-
-            @Override
-            public void hasNext() {
-
-                Arrays.sort(numberArray, Collections.reverseOrder());
-                ;
-                System.out.println("Reversed array from nested class Test2 : " + Arrays.toString(numberArray));
-
-            }
-
-            @Override
-            public void next() {
-
-                Arrays.sort(numberArray, Collections.reverseOrder());
-                Arrays.toString(numberArray);
-                for (int i = 0; i < numberArray.length; i++) {
-                    if (numberArray[i] != numberArray[i]++) {
-                        numberArray[i] = numberArray[i];
-                    }
+        @Override
+        public Object next(Number[] myNumbers) {
+            for (int i = 0; i < myNumbers.length; i++) {
+                if (i % 2 != 0) {
+                    myNumbers[i] = 0;
+                    Arrays.sort(myNumbers);
                 }
 
-               Arrays.stream(numberArray).limit(7).forEach(System.out::println);
+                System.out.println("Arrays.asList(myNumbers) = " + Arrays.asList(myNumbers));
             }
+            return myNumbers;
+
+        }
+    }
+
+
+    public class MyInnerClassTwo implements Iterator {
+        boolean v;
+        int i =0;
+        @Override
+        public boolean hasNext(Number[] number) {
+
+
+            if (myNumbers.length > i) {
+                v = true;
+            } else {
+                v = false;
+            }
+            return v;
         }
 
-        Test1 test1 = new Test1();
-        Test2 test2 = new Test2();
+        @Override
+        public Object next(Number[] myNumbers) {
 
-        test1.hasNext();
-        test1.next();
+            Arrays.sort(myNumbers, Collections.reverseOrder());
 
-        test2.hasNext();
-        test2.next();
+            System.out.println("Arrays.asList(myNumbers) = " + Arrays.asList(myNumbers));
+            return myNumbers;
+        }
 
 
     }
 }
+
+
+
+
+
+
+
 
 
