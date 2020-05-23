@@ -52,21 +52,22 @@ public class Deputy extends Human {
         this.age = age;
         this.briber = briber;
     }
-    public void giveBribe() {
+    public int giveBribe() {
 
-        if (!this.briber) {
-            System.out.println("This deputy don`t give bribe");
-        } else {
-            System.out.println("Enter bribe value in $ :");
-            Scanner scanner = new Scanner(System.in);
-            int bribeSum = scanner.nextInt();
-
-            if (bribeValue>= 5000) {
-                System.out.println("Police get deputy!");
-            } else if (bribeValue < 5000) {
-                this.bribeValue = bribeSum;
-            }
-        }
+    return this.bribeValue;
+//        if (!this.briber) {
+//            System.out.println("This deputy don`t give bribe");
+//        } else {
+//            System.out.println("Enter bribe value in $ :");
+//            Scanner scanner = new Scanner(System.in);
+//            int bribeSum = scanner.nextInt();
+//
+//            if (bribeValue>= 5000) {
+//                System.out.println("Police get deputy!");
+//            } else if (bribeValue < 5000) {
+//                this.bribeValue = bribeSum;
+//            }
+//        }
     }
 
     @Override

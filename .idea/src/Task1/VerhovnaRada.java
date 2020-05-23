@@ -89,7 +89,12 @@ public class VerhovnaRada {
                 });
     }
     void biggestBriberInFraction() {
-        fractionList.forEach(x -> x.biggestBriber());
+
+        List<List<Deputy>> listOfDeputy = fractionList.stream().map(fraction -> fraction.allDeputyFraction()).collect(Collectors.toList());
+        List<Deputy> collectDeputy = listOfDeputy.stream().flatMap(deputy -> deputy.stream()).collect(Collectors.toList());
+        Collections.sort(collectDeputy, (deputy1,deputy2)->{
+            return deputy1.giveBribe()-deputy2.giveBribe();
+        });
     }
     void allDeputyInFraction(){
        fractionList.forEach(x->x.allDeputyFraction());

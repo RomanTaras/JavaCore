@@ -3,7 +3,7 @@ package Task1;
 import java.util.*;
 
 public class Fraction {
-String fractionName;
+    String fractionName;
 
     public Fraction(String fractionName) {
         this.fractionName = fractionName;
@@ -61,8 +61,8 @@ String fractionName;
         System.out.println("The biggest briber = " + a);
     }
 
-    void allDeputyFraction() {
-        listDeputyNameInFraction.forEach(c -> System.out.print("All deputy in fraction" + c));
+    public List<Deputy> allDeputyFraction() {
+        return listDeputyNameInFraction;
     }
 
     void removeAllDeputyFromFraction() {
