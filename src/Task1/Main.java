@@ -1,10 +1,16 @@
 package Task1;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         VerhovnaRada vr = new VerhovnaRada();
+
+
+        PrintToFile printToFile = new PrintToFile();
+        PrintToConsole printToConsole = new PrintToConsole();
+
         System.out.println("Please enter = " +
                 "\n1. for add fraction;" +
                 "\n2. for delete fraction;" +
@@ -31,6 +37,8 @@ public class Main {
                     break;
                 case (4):
                     vr.addDeputyToFraction();
+                    printToFile.deputyWriter(vr.fractionList);
+                    printToConsole.deputyWriter(vr.fractionList);
                     break;
                 case (5):
                     vr.showSomeFraction();
@@ -45,7 +53,17 @@ public class Main {
                     break;
             }
 
+
         }
+
     }
+
+
 }
+
+
+
+
+
+
 

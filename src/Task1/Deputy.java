@@ -1,6 +1,6 @@
 package Task1;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Deputy extends Human {
     public Deputy(int weight, int height, String carBrand) {
@@ -12,6 +12,7 @@ public class Deputy extends Human {
     private int age;
     private boolean briber;
     private int bribeValue;
+
 
     public int getBribeValue() {
         return bribeValue;
@@ -52,23 +53,25 @@ public class Deputy extends Human {
         this.age = age;
         this.briber = briber;
     }
-    public int giveBribe() {
 
-    return this.bribeValue;
-//        if (!this.briber) {
-//            System.out.println("This deputy don`t give bribe");
-//        } else {
-//            System.out.println("Enter bribe value in $ :");
-//            Scanner scanner = new Scanner(System.in);
-//            int bribeSum = scanner.nextInt();
-//
-//            if (bribeValue>= 5000) {
-//                System.out.println("Police get deputy!");
-//            } else if (bribeValue < 5000) {
-//                this.bribeValue = bribeSum;
-//            }
-//        }
+    public void giveBribe() {
+
+        if (!this.briber) {
+
+        } else {
+            System.out.println("Enter bribe value in $ :");
+            Scanner scanner = new Scanner(System.in);
+            int bribeSum = scanner.nextInt();
+
+            if (bribeValue >= 5000) {
+                System.out.println("Police get deputy!");
+            } else if (bribeValue < 5000) {
+                this.bribeValue = bribeSum;
+            }
+        }
+
     }
+
 
     @Override
     public String toString() {

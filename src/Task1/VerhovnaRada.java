@@ -86,23 +86,19 @@ public class VerhovnaRada {
     void listOfAllBribersInFraction() {
         fractionList.forEach(fraction -> {
             fraction.briberList();
-                });
-    }
-    void biggestBriberInFraction() {
-
-        List<List<Deputy>> listOfDeputy = fractionList.stream().map(fraction -> fraction.allDeputyFraction()).collect(Collectors.toList());
-        List<Deputy> collectDeputy = listOfDeputy.stream().flatMap(deputy -> deputy.stream()).collect(Collectors.toList());
-        Collections.sort(collectDeputy, (deputy1,deputy2)->{
-            return deputy1.giveBribe()-deputy2.giveBribe();
         });
     }
-    void allDeputyInFraction(){
-       fractionList.forEach(x->x.allDeputyFraction());
+
+    Deputy biggestBriberInRada() {
+        List<List<Deputy>> listOfDeputy = fractionList.stream().map(fraction -> fraction.allDeputyFraction()).collect(Collectors.toList());
+        List<Deputy> collectDeputy = listOfDeputy.stream().flatMap(deputy -> deputy.stream()).collect(Collectors.toList());
+        Collections.sort(collectDeputy, Comparator.comparingInt(Deputy::getBribeValue));
+        return collectDeputy.get(0);
     }
 
-
-
-
+    void allDeputyInFraction() {
+        fractionList.forEach(x -> x.allDeputyFraction());
+    }
 
     @Override
     public String toString() {

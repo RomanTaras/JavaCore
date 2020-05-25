@@ -17,7 +17,7 @@ public class Fraction {
         this.fractionName = fractionName;
     }
 
-    private List<Deputy> listDeputyNameInFraction = new ArrayList<>();
+    private final List<Deputy> listDeputyNameInFraction = new ArrayList<>();
 //    Stream stream = listDeputyNameInFraction.stream();
 
     public void addDeputy() {
@@ -53,7 +53,6 @@ public class Fraction {
     void briberList() {
         System.out.println("all bribers = ");
         listDeputyNameInFraction.stream().filter(deputy -> deputy.getBribeValue() > 0).forEach(System.out::print);
-
     }
 
     void biggestBriber() {
